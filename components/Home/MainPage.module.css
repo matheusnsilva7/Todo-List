@@ -1,0 +1,16 @@
+.date {
+  text-align: center;
+  font-weight: 400;
+  display: inline-block;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem;
+  align-items: center;
+}
+@media (min-width: 700px) {
+  .date {
+    font-size: 2rem;
+  }
+}
