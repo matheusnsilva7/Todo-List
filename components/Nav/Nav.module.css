@@ -43,7 +43,7 @@
   z-index: -1;
 }
 .show-Background {
-  z-index: 0;
+  z-index: 4;
   background-color: #ababab49;
 }
 .links {
@@ -55,7 +55,7 @@
   overflow: hidden;
   width: 0%;
   transition: all 1s ease-in-out;
-  z-index: 2;
+  z-index: 5;
 }
 .show-links {
   width: 65%;
@@ -87,7 +87,7 @@
   font-size: 2rem;
   color: black;
   display: block;
-  padding: 1.5rem 0 0 3rem;
+  padding: 1.5rem 0 1rem 5rem;
   font-family: "Roboto", sans-serif;
 }
 
