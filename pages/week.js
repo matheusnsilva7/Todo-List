@@ -5,7 +5,7 @@ const calendar = () => {
   return (
     <>
       <Head>
-        <title>Week</title>
+        <title>To do - Week</title>
       </Head>
       <Week />
     </>

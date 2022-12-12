@@ -5,7 +5,7 @@ const achievement = () => {
   return (
     <>
       <Head>
-        <title>Goals</title>
+        <title>To do - Goals</title>
       </Head>
       <Card>
         <Goals />

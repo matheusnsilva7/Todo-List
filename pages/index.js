@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>to do - Home</title>
       </Head>
       <Card>
         <MainPage />
