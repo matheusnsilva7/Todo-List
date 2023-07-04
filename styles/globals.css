@@ -4,7 +4,7 @@ html {
   font-size: 10px;
 }
 body {
-  background-image: url(../public/background2.jpg);
+  /* background-image: url(/img/background2.jpg); */
   background-size: cover;
   width: 100vw;
   height: 100vh;
