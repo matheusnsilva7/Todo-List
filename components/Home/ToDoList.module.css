@@ -1,27 +1,24 @@
-.container {
-  height: 90%;
-}
 .todoContainer {
   height: 100%;
 }
 .todo {
-  height: 15rem;
-  width: 18rem;
-  background-color: #d9d9d9;
-  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
   margin: 2rem auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  overflow: hidden;
+  max-width: 46rem;
 }
 .paragraph {
-  text-align: center;
-  font-size: 1.2rem;
-  overflow: hidden;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: white;
+  padding-left: 3rem;
+  grid-column: span 2;
 }
 .hover {
   position: absolute;
@@ -52,51 +49,142 @@
   font-size: 1.8rem;
   font-weight: 400;
   padding-bottom: 1rem;
-}
-.gray {
-  background-color: #d9d9d9;
-}
-.red {
-  background-color: rgb(255, 0, 0);
-}
-.blue {
-  background-color: rgb(0, 238, 255);
-}
-.green {
-  background-color: rgb(0, 255, 0);
-}
-.yellow {
-  background-color: rgb(251, 255, 0);
+  color: white;
+  padding-left: 3rem;
 }
 .notfound {
   text-align: center;
-  padding-top: 5rem;
   font-weight: 200;
-  font-size: 2rem;
-  color: #8a8a8a;
+  font-size: 1.5rem;
+  color: #fff;
+  padding-top: 3rem;
 }
 .notAchieved {
   background-color: #8a8a8a96;
 }
 .Achieved {
-  background-color: #ffd900;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 30rem;
+  padding-top: 1rem;
+  margin: auto;
+  grid-column: span 2;
 }
-@media (min-width: 750px) {
-  .todoContainer {
-    height: 100%;
-    padding: 3rem 0;
+.Achieved div {
+  display: flex;
+  align-items: center;
+  fill: white;
+  gap: 0.2rem;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.Achieved button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+}
+.active {
+  background-color: #308aff;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+.buttonSettings {
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  margin-right: 3rem;
+  cursor: pointer;
+}
+.trash {
+  fill: #ff8181;
+}
+.informationContainer {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .TodolistContainer {
     display: grid;
-    grid-template-columns: repeat(3, 18rem);
+    grid-template-columns: 1fr 20rem;
+    grid-template-rows: 80vh;
     gap: 2rem;
-    justify-content: center;
   }
-  .todo {
+  .informationContainer {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    margin: 2rem auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2rem;
+    display: grid;
+    height: 53rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    text-align: center;
+  }
+  .informationContainer h4 {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 400;
+  }
+  .informationContainer span {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 300;
+    display: block;
+  }
+  .graphic {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 16rem;
+    border-radius: 2rem;
+    display: grid;
+    place-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+  }
+  .graphicContainer {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    grid-column: span 3;
     margin: 0 auto;
   }
-}
-@media (min-width: 1350px) {
-  .todoContainer {
-    grid-template-columns: repeat(5, 18rem);
-    gap: 3rem;
+  .graphicContainer::after {
+    content: "";
+    display: block;
+    width: 8rem;
+    border-radius: 50%;
+    height: 8rem;
+    margin: 1rem;
+    background-color: rgb(85 84 84);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2);
+  }
+  .completed {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: rgba(94, 255, 0, 0.8);
+  }
+  .progress {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 0, 0.8);
+  }
+  .not {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.8);
+  }
+  .graphic h4 {
+    font-size: 1.1rem;
+  }
+  .graphic span {
+    font-size: 1.1rem;
   }
 }

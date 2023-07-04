@@ -10,17 +10,21 @@ const BtnForm = () => {
   };
   return (
     <>
-      {showForm && <Form form={form} />}
-      <button className={classes.btn} onClick={() => setShowForm(!showForm)}>
-        <svg
-          className={classes.svg}
-          xmlns="http://www.w3.org/2000/svg"
-          height="48"
-          width="48"
-        >
-          <path d="M22.5 38V25.5H10v-3h12.5V10h3v12.5H38v3H25.5V38Z" />
-        </svg>
-      </button>
+      {showForm ? (
+        <Form form={form} />
+      ) : (
+        <button className={classes.btn} onClick={() => setShowForm(!showForm)}>
+          <svg
+            className={classes.svg}
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 -960 960 960"
+            width="24"
+          >
+            <path d="M440-200v-240H200v-80h240v-240h80v240h240v80H520v240h-80Z" />
+          </svg>
+        </button>
+      )}
     </>
   );
 };

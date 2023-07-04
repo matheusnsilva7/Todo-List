@@ -3,9 +3,8 @@ import StoreContext from "../Store/store-context";
 
 import classes from "./Arrow.module.css";
 
-const Arrow = ({ right }) => {
-  const { nextDay, prevDay, currentday } = useContext(StoreContext);
-
+const Arrow = ({ right, week }) => {
+  const { nextDay, prevDay } = useContext(StoreContext);
   const clickHandler = () => {
     right ? nextDay() : prevDay();
   };

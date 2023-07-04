@@ -11,8 +11,6 @@ const StoreContext = React.createContext({
   setDay: () => {},
 });
 
-const defaultState = { 0: [], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [] };
-
 const weelyReducer = (state, action) => {
   let updatedItems;
   if (action.type === "ADD") {
@@ -37,7 +35,7 @@ const weelyReducer = (state, action) => {
     updatedItems = state[action.weekday].filter(
       (task) => task.id === action.id
     );
-    let achieved = { ...updatedItems["0"], achieved: true };
+    let achieved = { ...updatedItems["0"], achieved: action.achieved };
     updatedItems = state[action.weekday].map((element) => {
       if (element.id === action.id) {
         return achieved;
@@ -94,8 +92,13 @@ export const StoreContextProvider = (props) => {
   const setDayHandler = (e) => {
     setCurrentDay(e);
   };
-  const achievedHandler = (id) => {
-    dispatchAction({ type: "ACHIEVED", id: id, weekday: currentDay });
+  const achievedHandler = (id, achieved) => {
+    dispatchAction({
+      type: "ACHIEVED",
+      id: id,
+      achieved: achieved,
+      weekday: currentDay,
+    });
   };
   return (
     <StoreContext.Provider

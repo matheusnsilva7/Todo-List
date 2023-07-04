@@ -9,7 +9,7 @@ const Form = (props) => {
     const data = [
       ...new FormData(e.target),
       ["id", Math.random() * 100],
-      ["achieved", false],
+      ["achieved", "in Progress"],
     ];
     dataCtx.addTodo(Object.fromEntries(data));
     props.form(false);
@@ -19,40 +19,29 @@ const Form = (props) => {
   };
   return (
     <>
-      <div className={classes.background} onClick={form}></div>
       <form className={classes.form} onSubmit={submitForm}>
-        <h3 className={classes.title}>New to do</h3>
-        <label>Task</label>
-        <input type="text" name="task" required />
-        <label>Addicional information</label>
-        <textarea name="information" rows="5" cols="33" maxLength="50" />
-        <label>Color</label>
-        <input type="radio" name="color" id="radiogray" value="gray" />
-        <label
-          className={classes.gray + " " + classes.label}
-          htmlFor="radiogray"
-        ></label>
-        <span className={classes.span}>Default</span>
-        <input type="radio" name="color" id="radiored" value="red" />
-        <label
-          className={classes.red + " " + classes.label}
-          htmlFor="radiored"
-        ></label>
-        <input type="radio" name="color" id="radioblue" value="blue" />
-        <label
-          className={`${classes.blue} ${classes.label}`}
-          htmlFor="radioblue"
-        ></label>
-        <input type="radio" name="color" id="radiogreen" value="green" />
-        <label
-          className={classes.green + " " + classes.label}
-          htmlFor="radiogreen"
-        ></label>
-        <input type="radio" name="color" id="radioredyellow" value="yellow" />
-        <label
-          className={classes.yellow + " " + classes.label}
-          htmlFor="radioredyellow"
-        ></label>
+        <label htmlFor="task">Task</label>
+        <div className={classes.exit} onClick={form}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="20"
+            viewBox="0 -960 960 960"
+            width="20"
+          >
+            <path d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z" />
+          </svg>
+        </div>
+        <input type="text" name="task" id="task" required />
+        <label htmlFor="information" className={classes.addInformation}>
+          Addicional information
+        </label>
+        <textarea
+          name="information"
+          rows="5"
+          cols="33"
+          maxLength="50"
+          id="information"
+        />
         <button>Add</button>
       </form>
     </>
