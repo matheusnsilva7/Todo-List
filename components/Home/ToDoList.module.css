@@ -17,7 +17,8 @@
   font-size: 1.1rem;
   font-weight: 300;
   color: white;
-  padding-left: 3rem;
+  padding-left: 2rem;
+  text-align: left;
   grid-column: span 2;
 }
 .hover {
@@ -50,7 +51,8 @@
   font-weight: 400;
   padding-bottom: 1rem;
   color: white;
-  padding-left: 3rem;
+  padding-left: 2rem;
+  text-align: left;
 }
 .notfound {
   text-align: center;
@@ -128,6 +130,12 @@
     font-size: 1.5rem;
     color: white;
     font-weight: 400;
+  }
+  .paragraph{
+    padding-left: 3rem;
+  }
+  .title{
+    padding-left: 3rem;
   }
   .informationContainer span {
     font-size: 1.5rem;
