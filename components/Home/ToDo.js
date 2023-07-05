@@ -3,28 +3,28 @@ import StoreContext from "../Store/store-context";
 
 import classes from "./ToDoList.module.css";
 
-const ToDo = ({ id, task, information, color, Achieved = false }) => {
+const ToDo = ({ day, id, task, information, Achieved = false }) => {
   const [remove, setRemove] = useState(false);
   const { removeTodo, achieved } = useContext(StoreContext);
 
   const btnRemoveHandler = () => {
-    removeTodo(id);
+    removeTodo(id, day);
   };
 
   const btnAchivedHandler = () => {
-    achieved(id, "Achieved");
+    achieved(id, "Achieved", day);
   };
   const btnNotAchivedHandler = () => {
-    achieved(id, "Not achieved");
+    achieved(id, "Not achieved", day);
   };
   const btnInProgressHandler = () => {
-    achieved(id, "in Progress");
+    achieved(id, "in Progress", day);
   };
 
   return (
     <div
       onClick={() => remove && setRemove(false)}
-      className={`${classes.todo} ${classes[color]}`}
+      className={`${classes.todo}`}
       key={id}
     >
       <h4 className={classes.title}>{task}</h4>

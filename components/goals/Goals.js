@@ -26,6 +26,7 @@ const Goals = () => {
                       color={task.color}
                       Achieved={task.achieved}
                       achievementPage={true}
+                      day={task.week}
                     />
                   );
                 }

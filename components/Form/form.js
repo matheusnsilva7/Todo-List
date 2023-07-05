@@ -10,6 +10,7 @@ const Form = (props) => {
       ...new FormData(e.target),
       ["id", Math.random() * 100],
       ["achieved", "in Progress"],
+      ["week", dataCtx.currentday],
     ];
     dataCtx.addTodo(Object.fromEntries(data));
     props.form(false);

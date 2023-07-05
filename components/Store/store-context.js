@@ -75,7 +75,7 @@ export const StoreContextProvider = (props) => {
     dispatchAction({ type: "ADD", task: element, weekday: currentDay });
   };
 
-  const removeToDoHandler = (id, day = false) => {
+  const removeToDoHandler = (id, day) => {
     dispatchAction({
       type: "REMOVE",
       id: id,
@@ -92,12 +92,12 @@ export const StoreContextProvider = (props) => {
   const setDayHandler = (e) => {
     setCurrentDay(e);
   };
-  const achievedHandler = (id, achieved) => {
+  const achievedHandler = (id, achieved, day) => {
     dispatchAction({
       type: "ACHIEVED",
       id: id,
       achieved: achieved,
-      weekday: currentDay,
+      weekday: typeof day === "number" ? day : currentDay,
     });
   };
   return (

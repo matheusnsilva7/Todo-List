@@ -41,7 +41,7 @@
   height: 3rem;
   border-radius: 1rem;
 }
-.addInformation{
+.addInformation {
   grid-column: span 2;
 }
 .form button {
@@ -53,6 +53,7 @@
   color: white;
   border-radius: 1rem;
   grid-column: span 2;
+  cursor: pointer;
 }
 .span {
   position: absolute;

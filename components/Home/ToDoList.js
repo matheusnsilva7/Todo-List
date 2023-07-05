@@ -38,8 +38,8 @@ const ToDoList = () => {
                     key={task.id}
                     task={task.task}
                     information={task.information}
-                    color={task.color}
                     Achieved={task.achieved}
+                    day={task.week}
                   />
                 );
               })}
