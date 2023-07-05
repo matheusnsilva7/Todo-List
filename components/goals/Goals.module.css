@@ -6,7 +6,7 @@
   padding: 1rem;
   max-width: 90rem;
   margin: 2rem auto;
-  height: 53rem;
+  height: 52.1rem;
   overflow-y: auto;
   overflow-x: hidden;
   text-align: center;
@@ -26,5 +26,6 @@
 @media (min-width: 700px) {
   .container {
     width: 70rem;
+    height: 53rem;
   }
 }
