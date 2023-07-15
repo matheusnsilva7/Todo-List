@@ -24,7 +24,7 @@
 .form textarea {
   border-radius: 1rem;
   border: none;
-  height: 4rem;
+  height: 8rem;
   padding: 1rem;
   width: 100%;
   grid-column: span 2;
