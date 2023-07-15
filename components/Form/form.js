@@ -40,7 +40,7 @@ const Form = (props) => {
           name="information"
           rows="5"
           cols="33"
-          maxLength="50"
+          maxLength="300"
           id="information"
         />
         <button>Add</button>
