@@ -27,11 +27,11 @@ The Weekly To-Do List app is designed to assist you in efficiently managing your
 
 ## Demo
 
-Explore the live demo of the Weekly To-Do List app: [https://weekly-todo-app.netlify.app](https://weekly-todo-app.netlify.app)
+Explore the live demo of the Weekly To-Do List app: [https://todolist-matheusnsilva7.netlify.app](https://todolist-matheusnsilva7.netlify.app)
 
 ## Installation
 
-1. Clone this repository: `git clone https://github.com/your-username/weekly-todo-app.git`
+1. Clone this repository: `git clone`
 2. Navigate to the project directory: `cd weekly-todo-app`
 3. Install dependencies: `npm install`
 
