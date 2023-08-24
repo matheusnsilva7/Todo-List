@@ -29,27 +29,6 @@ The Weekly To-Do List app is designed to assist you in efficiently managing your
 
 Explore the live demo of the Weekly To-Do List app: [https://todolist-matheusnsilva7.netlify.app](https://todolist-matheusnsilva7.netlify.app)
 
-## Installation
-
-1. Clone this repository: `git clone`
-2. Navigate to the project directory: `cd weekly-todo-app`
-3. Install dependencies: `npm install`
-
-## Usage
-
-1. Start the development server: `npm run dev`
-2. Open your web browser and visit: `http://localhost:3000`
-
-## Contributing
-
-Contributions are welcome! To contribute to the project:
-
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/add-new-feature`
-3. Implement your changes and commit: `git commit -m "Add new feature"`
-4. Push to the branch: `git push origin feature/add-new-feature`
-5. Create a pull request explaining your changes.
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
